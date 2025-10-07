@@ -3,27 +3,26 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        ArrayList<Currency> currencies = new ArrayList<>();
+
+        currencies.add(new Currency(100, "One hundred dollar bills"));
+        currencies.add(new Currency(50, "Fifty dollar bills"));
+        currencies.add(new Currency(20, "Twenty dollar bills"));
+        currencies.add(new Currency(10, "Ten dollar bills"));
+        currencies.add(new Currency(5, "Five dollar bills"));
+        currencies.add(new Currency(2, "Two dollar bills"));
+        currencies.add(new Currency(1, "One dollar bills"));
+        
+        Wallet money = new Wallet(currencies);
+
         Scanner input = new Scanner(System.in);
         
         System.out.print("Please enter the amount of Money: ");
         System.out.println("\n");
 
-        ArrayList<CurrencyDenomination> money = new ArrayList<>();
-        money.add(new CurrencyDenomination(100, "one hundred dollar bills"));
-        money.add(new CurrencyDenomination(50, "fifty dollar bills"));
-        money.add(new CurrencyDenomination(20, "twenty dollar bills"));
-        money.add(new CurrencyDenomination(10, "ten dollar bills"));
-        money.add(new CurrencyDenomination(5, "five dollar bills"));
-        money.add(new CurrencyDenomination(2, "two dollar bills"));
-        money.add(new CurrencyDenomination(1, "one dollar bills"));
 
         input.close();    
         
     }
 
-    public static ArrayList<CurrencyDenomination> reverseMergeSort(
-        ArrayList<CurrencyDenomination> money
-    ) {
-        return money;
-    }
 }
